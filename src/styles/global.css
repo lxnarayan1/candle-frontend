@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-primary: 'Inter', sans-serif;
+  --font-logo: 'Bree Serif', serif;
+}
+
+body {
+  font-family: var(--font-primary);
+}
+
+/* Flame animation */
+@keyframes flame {
+  0% { transform: scale(1) translateY(0); opacity: 0.9; }
+  25% { transform: scale(1.3, 1.6) translateY(-3px); opacity: 1; }
+  50% { transform: scale(1, 1.2) translateY(0); opacity: 0.9; }
+  75% { transform: scale(1.2, 1.5) translateY(-2px); opacity: 1; }
+  100% { transform: scale(1) translateY(0); opacity: 0.9; }
+}
+
+.animate-flame {
+  animation: flame 1.5s infinite ease-in-out alternate;
+}
