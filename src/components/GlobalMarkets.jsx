@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getMarketOverview } from "../api/api";
+import { getMarketOverview } from "../services/api";
 
 const GlobalMarkets = () => {
   const [market, setMarket] = useState(null);
