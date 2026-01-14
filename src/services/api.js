@@ -44,3 +44,13 @@ export const login = async (email, password) => {
 
 export default apiClient;
 
+export const signup = async (fullName, email, password) => {
+  const res = await apiClient.post("accounts/signup/", {
+    full_name: fullName,
+    email,
+    password,
+  });
+  return res.data;
+};
+
+
